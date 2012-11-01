@@ -1,17 +1,11 @@
-Nasm 2 Shellcode                                                                                                          
-================
+# Nasm 2 Shellcode                                                                                                          
                                                                                                                            
-Description
------------
-                                                                                                                            
 Simple wrapper to compile a nasm assembly files and print the code in escaped format.                                       
                                                                                                                             
-Limitations
------------                                                                                                                
+## Limitations
 * Currently only supports 32bit mode.                                                                                   
 
-Copyright
----------
+## Copyright
 
 Copyright (C) 2012 p1ra <p1ra@smashthestack.org>                                                                          
                                                                                                                            
