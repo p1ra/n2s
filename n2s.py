@@ -48,7 +48,7 @@ def check_tools():
         sys.exit(0)
 
 def assemble(fname):
-    code = subprocess.call(["nasm","-f","elf32","-o",fname.split(".")[0],fname])
+    code = subprocess.call(["nasm","-f","elf32","-o",fname.split(".")[0]+".o",fname])
     
     if code != 0:
         log(0,"[-] Assembly error. Exiting...")
