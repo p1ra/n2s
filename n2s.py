@@ -84,15 +84,15 @@ def main():
         print USAGE
         sys.exit(0)
 
+    for opt,arg in opts:
+        if opt in ("-a","--print_asm"): LOG_LEVEL = 2
+        if opt in ("-c","--clean"): LOG_LEVEL = 0
+
     log(1,"[+] Asm 2 Shellcode - by p1ra.")
 
     check_tools()
 
     fname = args[0]
-
-    for opt,arg in opts:
-        if opt in ("-a","--print_asm"): LOG_LEVEL = 2
-        if opt in ("-c","--clean"): LOG_LEVEL = 0
 
     assemble(fname)
 
