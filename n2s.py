@@ -71,6 +71,14 @@ def build_shell(fname):
 
     return shellcode
 
+def clean_up(fname):
+    code = subprocess.call(["rm","-rf",fname.split(".")[0]+".o"])
+
+    if code != 0:
+        log(0,"[-] Cleanup error. Exiting...")
+        sys.exit(0)
+
+
 def main():
     global LOG_LEVEL
 
@@ -100,5 +108,7 @@ def main():
 
     log(1,"[+] Shellcode --------")
     log(0,shellcode)
+
+    clean_up(fname)
 
 main()
